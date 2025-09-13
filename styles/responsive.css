@@ -1,0 +1,513 @@
+@media screen and (max-width: 1350px) {
+  nav ul {
+    font-size: 1rem;
+  }
+
+  #hero h1 {
+    grid-column-start: 2;
+    grid-column-end: 12;
+  }
+
+  #focus h2 {
+    width: 100%;
+    position: static;
+  }
+
+  #focus h2::after {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2px;
+    background-color: #1e90ff;
+    margin: 0 0.75rem;
+    vertical-align: middle;
+  }
+
+  .cta {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta h5 {
+    margin-right: 2rem;
+  }
+
+  .focus-wrapper {
+    margin: 4rem 0;
+  }
+
+  .focus-card {
+    margin: 0 !important;
+    padding: 2rem 2rem;
+    height: 100%;
+  }
+
+  /* Contact Page */
+  .section-content-flex {
+    padding: 12rem 100px 0 100px;
+    flex-direction: column;
+    width: fit-content;
+  }
+
+  .contact-content {
+    width: fit-content;
+    gap: 3rem;
+  }
+
+  .contact-content p {
+    max-width: 665px;
+  }
+
+  #pre-form {
+    display: none;
+  }
+
+  #after-form {
+    display: flex;
+  }
+
+  #after-form > p {
+    font-family: "eb Garamond", serif;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  form {
+    padding: 4rem 0 6rem 0;
+    position: relative;
+  }
+
+  form::before,
+  form::after {
+    all: unset;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      rgba(0, 119, 204, 0),
+      #4d596650,
+      rgba(0, 119, 204, 0)
+    );
+  }
+
+  form::before {
+    top: 2rem;
+  }
+
+  form::after {
+    bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .focus-card {
+    padding: 2rem 1rem;
+  }
+
+  .section-content {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  nav {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0 16px;
+    padding: 0 32px;
+  }
+
+  h1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  nav ul {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 1rem;
+  }
+
+  .section-content-flex {
+    padding: 12rem 32px 0 32px;
+  }
+
+  .section-content {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0 16px;
+    padding: 0 32px;
+  }
+
+  #hero h1 {
+    grid-column-start: 1;
+    grid-column-end: 9;
+  }
+
+  #hero p {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    color: #d7dfe4;
+  }
+
+  #hero .btn {
+    grid-column-start: 3;
+    grid-column-end: 7;
+  }
+
+  #about h2 {
+    grid-column: span 8;
+  }
+
+  #about figure {
+    grid-column-start: 2;
+    grid-column-end: 8;
+  }
+
+  .about-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 4rem 0;
+  }
+
+  #about p {
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    position: relative;
+  }
+
+  #about p:not(:last-child)::after {
+    all: unset;
+    content: "";
+    position: absolute;
+    bottom: -2.5rem; /* half of gap (5rem) */
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      rgba(0, 119, 204, 0),
+      #4d5966,
+      rgba(0, 119, 204, 0)
+    );
+  }
+
+  #focus .section-content {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0 16px;
+    padding: 0 32px;
+    margin: 7rem 0;
+  }
+
+  #focus h2 {
+    grid-column: span 8;
+    position: static;
+  }
+
+  .focus-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .focus-card {
+    margin-bottom: 2.5rem !important;
+  }
+
+  .focus-card h4,
+  .focus-card p {
+    width: 370px;
+  }
+
+  .cta {
+    grid-column: span 8;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px; /* Fix design */
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    width: 40px;
+    justify-content: center;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .section-content {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 16px;
+    padding: 0 32px;
+  }
+
+  #hero h1 {
+    grid-column: span 4;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #hero p {
+    grid-column: span 4;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+    color: #d7dfe4;
+  }
+
+  #hero .btn {
+    grid-column: span 4;
+    font-size: 1rem;
+  }
+
+  #about .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 2.5rem;
+  }
+
+  #about h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  #about h2::after,
+  #about h2::before {
+    display: none;
+  }
+
+  #about p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px; /* Fix design */
+  }
+
+  #about p:not(:last-child)::after {
+    bottom: -1.5rem;
+  }
+
+  #focus .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #focus h2::before,
+  #focus h2::after {
+    display: none;
+  }
+
+  .focus-card {
+    padding: 2rem 2rem;
+  }
+
+  .focus-card h4 {
+    font-size: 1.25rem;
+  }
+
+  .focus-card p {
+    width: 100%;
+  }
+
+  .cta h5 {
+    all: unset;
+  }
+
+  .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .cta .btn {
+    background: #0a3d62;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .nav-container nav {
+    justify-content: center;
+  }
+
+  /* Contact Page */
+  .section-content-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-content,
+  .contact-content h2,
+  .contact-content p {
+    width: 100%;
+    max-width: 100%;
+    gap: 1.5rem;
+  }
+
+  form {
+    width: 100%;
+    padding: 3rem 0 5rem 0;
+  }
+
+  .name-mail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .label-input {
+    width: 100%;
+  }
+
+  #after-form {
+    width: 100%;
+    text-align: left;
+  }
+
+  #after-form > p {
+    padding-bottom: 1rem;
+  }
+
+  form::before {
+    top: 1.5rem;
+  }
+
+  form::after {
+    bottom: 2.5rem;
+  }
+
+  /* Sidebar container (mobile) */
+  #sidebar-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100vh;
+    background-color: #181b22;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  /* Open state */
+  #sidebar-menu.overlay-open {
+    right: 0;
+  }
+
+  .close-btn {
+    all: unset;
+    position: absolute;
+    top: 48px;
+    right: 32px;
+    display: flex;
+    justify-content: center;
+    height: 38px;
+  }
+
+  /* Sidebar links */
+  #sidebar-menu ul {
+    padding-top: 6rem;
+    padding-left: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+    list-style: none;
+  }
+
+  #sidebar-menu li {
+    margin-bottom: 1.5rem;
+  }
+
+  #sidebar-menu a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 100%;
+    transition: color 0.2s;
+  }
+
+  #sidebar-menu a:hover {
+    color: #666;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  #hero,
+  #contact {
+    padding-top: 8.375rem;
+    padding-bottom: 8.375rem;
+  }
+
+  #contact .section-content-flex {
+    padding-top: 4rem;
+  }
+
+  #focus .section-content {
+    margin: 8.375rem 0;
+  }
+}
+
+@media screen and (max-height: 800px) and (max-width: 750px) {
+  #hero,
+  #contact {
+    padding-top: 8.375rem;
+    padding-bottom: 5rem;
+  }
+
+  #focus .section-content {
+    margin: 5rem 0;
+  }
+}

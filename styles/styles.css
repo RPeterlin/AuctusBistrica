@@ -1,0 +1,373 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  color: #b5b5b5;
+  background-color: #090d11;
+
+  min-height: 100vh;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+h2 {
+  font-family: "EB Garamond", serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Header */
+header {
+  position: absolute;
+  z-index: 10;
+  top: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger-menu {
+  all: unset;
+  display: none;
+}
+
+nav {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 20px;
+}
+
+nav ul {
+  grid-column-start: 8;
+  grid-column-end: 13;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 18px;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active a {
+  position: relative; /* needed for ::after positioning */
+}
+
+.active a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2rem;
+  height: 2px;
+  background-color: #1e90ff;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+.logo {
+  font-family: "EB Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo a {
+  font-family: inherit;
+}
+
+/* Sidebar container (mobile) */
+#sidebar-menu {
+  display: none;
+}
+
+/* Hero */
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #090d11 100%),
+    url("../assets/hero_bg.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section-content {
+  max-width: 1440px;
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 20px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+#hero h1 {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  font-size: 4.5rem;
+  margin-bottom: 3.75rem;
+  line-height: 94px;
+}
+
+#hero p {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  background: #0a3d62;
+  color: #fff;
+  padding: 14px 0;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #004477;
+}
+
+#hero .btn {
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+
+/* About */
+#about h2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#about h2::before,
+#about h2::after {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2px;
+  background-color: #1e90ff;
+  margin: 0 0.75rem;
+  vertical-align: middle;
+}
+
+#about figure {
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+#about figure img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  border-radius: 0.5rem;
+}
+
+.about-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+
+#about p {
+  width: 27.5%;
+  font-size: 1rem;
+  text-align: left;
+  position: relative;
+}
+
+/* Create vertical separator inside the gap */
+#about p:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 115%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(77, 89, 102, 0),
+    #4d5966,
+    rgba(77, 89, 102, 0)
+  );
+}
+
+/* Focus */
+#focus {
+  background: linear-gradient(to bottom, #090d11 0rem, rgba(0, 0, 0, 0) 20rem),
+    url("../assets/focus_bg.png") center/cover no-repeat;
+}
+
+#focus .section-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 14rem 0;
+}
+
+#focus h2 {
+  width: fit-content;
+  right: 100px;
+  top: 0;
+  position: absolute;
+}
+
+#focus h2::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2px;
+  background-color: #1e90ff;
+  margin: 0 0.75rem;
+  vertical-align: middle;
+}
+
+.focus-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.focus-card {
+  background-color: #090d11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  height: fit-content;
+
+  box-shadow: 8px 8px 12px rgb(0, 0, 0),
+    -8px -8px 12px rgba(255, 255, 255, 0.02);
+}
+
+.focus-card:nth-of-type(2) {
+  margin-top: 100px;
+}
+
+.focus-card:nth-of-type(3) {
+  margin-top: 200px;
+}
+
+.focus-card h4,
+.focus-card p {
+  width: 270px;
+}
+
+.focus-card h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 366px;
+}
+
+.cta h5 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cta .btn {
+  padding: 1rem 2rem;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  background: #090d11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-container {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: solid #242f3a 1px;
+}
+
+footer li:first-child a::after {
+  display: none;
+}
+
+.tos-and-copy {
+  padding: 4rem 0;
+  font-size: 1rem;
+  line-height: 34px;
+}
+
+.tos a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.tos a:nth-of-type(1)::after {
+  content: "•";
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0.75rem;
+}
