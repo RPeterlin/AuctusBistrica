@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Auctus Bistrica - Get in touch to explore investment opportunities."
+    />
+    <title>Contact Us - Auctus Bistrica</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/contact.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <h3 class="logo"><a href="../#hero">AuctusBistrica</a></h3>
+        <button
+          class="hamburger-menu"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          <img src="../assets/menu.svg" alt="" />
+        </button>
+
+        <!-- Desktop navigation -->
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../#about">About Us</a></li>
+          <li><a href="../#focus">Our Focus</a></li>
+          <li class="active"><a href="">Contact</a></li>
+        </ul>
+
+        <!-- Sidebar Navigation (mobile only) -->
+        <div id="sidebar-menu" class="sidebar-menu">
+          <button class="close-btn" aria-expanded="false">
+            <img src="assets/close_menu.svg" alt="" />
+          </button>
+          <ul>
+            <li><a href="../#hero">Home</a></li>
+            <li><a href="../#about">About Us</a></li>
+            <li><a href="../#focus">Our Focus</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contact Form -->
+    <main>
+      <section id="contact">
+        <div class="section-content-flex">
+          <div class="contact-content">
+            <h2>Get in Touch</h2>
+            <p>
+              If you have any questions about our work or would like to discuss
+              potential business opportunities, we’re here to help. Reach out
+              and we’ll connect you with the right member of our team.
+            </p>
+            <div id="pre-form" class="email-phone">
+              <div class="email">
+                <img src="../assets/mail_icon.svg" alt="Email Icon" />
+                <p>luka.peterlin@gmail.com</p>
+              </div>
+              <div class="phone">
+                <img src="../assets/phone_icon.svg" alt="Phone Icon" />
+                <p>+386 30 270 607</p>
+              </div>
+              <p class="mobile-extra-text">Or send us a message</p>
+            </div>
+          </div>
+
+          <form action="#" method="post">
+            <div class="name-mail-container">
+              <div class="label-input">
+                <label for="name">First and Last Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="label-input">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="label-area">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+
+          <div id="after-form" class="email-phone">
+            <p>You can also reach us at:</p>
+            <div class="email">
+              <img src="../assets/mail_icon.svg" alt="Email Icon" />
+              <p>luka.peterlin@gmail.com</p>
+            </div>
+            <div class="phone">
+              <img src="assets/phone_icon.svg" alt="Phone Icon" />
+              <p>+386 30 270 607</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="nav-container">
+        <nav>
+          <h3 class="logo"><a href="../#hero">AuctusBistrica</a></h3>
+          <ul>
+            <li><a href="../#hero">Home</a></li>
+            <li><a href="../#about">About Us</a></li>
+            <li><a href="../#focus">Our Focus</a></li>
+            <li><a href="" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="tos-and-copy">
+        <div class="tos">
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <p class="copyright">Copyright @ AuctusBistrica.com 2025</p>
+      </div>
+    </footer>
+    <script>
+      const hamburgerButton = document.querySelector(".hamburger-menu");
+      const sidebar = document.querySelector(".sidebar-menu");
+      const closeBtn = document.querySelector(".close-btn");
+
+      hamburgerButton.addEventListener("click", () => {
+        sidebar.classList.add("overlay-open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("overlay-open");
+      });
+
+      // Close sidebar when clicking outside of it
+      document.addEventListener("click", (event) => {
+        const isClickInside =
+          sidebar.contains(event.target) ||
+          hamburgerButton.contains(event.target);
+
+        if (!isClickInside && sidebar.classList.contains("overlay-open")) {
+          sidebar.classList.remove("overlay-open");
+        }
+      });
+    </script>
+  </body>
+</html>
