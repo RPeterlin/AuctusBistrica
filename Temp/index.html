@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Auctus Bistrica is a private alternative fund focused on real estate and growth-stage businesses, delivering lasting results with trusted partners."
+    />
+    <title>Auctus Bistrica</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <h3 class="logo"><a href="#hero">AuctusBistrica</a></h3>
+        <button
+          class="hamburger-menu"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          <img src="assets/menu.svg" alt="" />
+        </button>
+
+        <!-- Desktop navigation -->
+        <ul>
+          <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#focus">Our Focus</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+
+        <!-- Sidebar Navigation (mobile only) -->
+        <div id="sidebar-menu" class="sidebar-menu">
+          <button class="close-btn" aria-expanded="false">
+            <img src="assets/close_menu.svg" alt="" />
+          </button>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#focus">Our Focus</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="section-content">
+          <h1>Investing with Vision.<br />Delivering Lasting Results.</h1>
+          <p>
+            A private alternative fund focused on real estate and growth-stage
+            businesses, working exclusively with a select network of trusted
+            partners.
+          </p>
+          <a href="/contact" class="btn">Partner with Us</a>
+        </div>
+      </section>
+
+      <!-- Origin Story -->
+      <section id="about">
+        <div class="section-content">
+          <h2>Our Origin Story</h2>
+          <figure>
+            <img src="assets/kamnik.png" alt="Aerial view of Kamnik town" />
+          </figure>
+          <div class="about-wrapper">
+            <p>
+              It began in Kamnik on May 28, 2025 - a small town with a long
+              history, and the place where a new one was about to be written.
+              From the outset, Auctus Bistrica was built on a single, unwavering
+              goal: to create an investment institution that would endure for
+              generations, shaping the cities we live in, the industries we
+              depend on, and the communities we call home.
+            </p>
+            <p>
+              What started with a close view of emerging real estate markets
+              soon reached far beyond local borders. The vision expanded - from
+              understanding the potential of new city districts to embracing the
+              growth of transformative businesses. Today, that vision combines
+              the stability of large-scale developments with the dynamic
+              potential of companies poised to define the future.
+            </p>
+            <p>
+              We think in decades, not quarters. Our horizon stretches a century
+              ahead, guided by a responsibility to preserve and grow capital for
+              those who entrust it to us. We operate quietly, choosing each
+              opportunity with precision. And we measure our success not only in
+              returns, but in the lasting mark we leave on the world - a legacy
+              to be inherited by the generations yet to come.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Focus -->
+      <section id="focus">
+        <div class="section-content">
+          <h2>Our Focus</h2>
+          <div class="focus-wrapper">
+            <div class="focus-card">
+              <h4>Investing in companies</h4>
+              <p>
+                We invest in early- and growth-stage companies with strong
+                market potential, providing capital and guidance in exchange for
+                equity.
+              </p>
+            </div>
+            <div class="focus-card">
+              <h4>Investing in real estate</h4>
+              <p>
+                We invest in large-scale real estate developments in emerging
+                urban areas, concentrating on projects that help shape new city
+                districts and support urban growth.
+              </p>
+            </div>
+            <div class="focus-card">
+              <h4>Invitation-only fund</h4>
+              <p>
+                As a closed, invitation-only fund, we work exclusively with a
+                select group of partners, prioritizing long-term performance and
+                capital preservation.
+              </p>
+            </div>
+          </div>
+          <div class="cta">
+            <h5>Want to learn more?</h5>
+            <a href="/contact" class="btn">Contact Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="nav-container">
+        <nav>
+          <h3 class="logo"><a href="#hero">AuctusBistrica</a></h3>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#focus">Our Focus</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="tos-and-copy">
+        <div class="tos">
+          <a style="display: none" href="#">Terms of Service</a>
+          <a style="display: none" href="#">Privacy Policy</a>
+          <span href="#"
+            >Auctus Bistrica d.o.o. je v procesu preoblikovanja v zasebni
+            investicijski sklad (AIS).</span
+          >
+        </div>
+        <p class="copyright">Copyright @ AuctusBistrica.com 2025</p>
+      </div>
+    </footer>
+    <script>
+      const hamburgerButton = document.querySelector(".hamburger-menu");
+      const sidebar = document.querySelector(".sidebar-menu");
+      const closeBtn = document.querySelector(".close-btn");
+
+      hamburgerButton.addEventListener("click", () => {
+        sidebar.classList.add("overlay-open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("overlay-open");
+      });
+
+      // Close sidebar when clicking outside of it
+      document.addEventListener("click", (event) => {
+        const isClickInside =
+          sidebar.contains(event.target) ||
+          hamburgerButton.contains(event.target);
+
+        if (!isClickInside && sidebar.classList.contains("overlay-open")) {
+          sidebar.classList.remove("overlay-open");
+        }
+      });
+    </script>
+  </body>
+</html>
